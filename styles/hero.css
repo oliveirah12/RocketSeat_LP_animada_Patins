@@ -52,22 +52,34 @@
 
       border-radius: 5rem;
       
+      transition: transform 350ms;
+      
       &.buy {
         padding: 1.5rem 3rem;
         background-color: var(--snitap-sun);
       }
 
-      &.play {
+      &.play span{
         padding: 1.5rem;
         border-radius: 50%;
         background-color: white;
-        
+        display: flex;
+      }
+      
+      & .shadow {
+        box-shadow: 
+          0px 2px 5px rgb(0 0 0 / .1),
+          0px 9px 9px rgb(0 0 0 / .09),
+          0px 20px 12px rgb(0 0 0 / .05),
+          0px 36px 15px rgb(0 0 0 / .1);
+      }
+  
+      &:hover {
+        transform: scale(1.1);
       }
     }
 
-    & .shadow {
-      box-shadow: 0 2px 5px;
-    }
+    
   }
 }
 
