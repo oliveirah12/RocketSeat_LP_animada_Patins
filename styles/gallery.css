@@ -116,3 +116,42 @@ section.gallery {
     transform: translateY(100%);
   }
 }
+
+
+@media (width <= 67.5rem) {
+
+  & section.gallery {
+
+    padding: .5rem 2rem;
+
+
+    & header h2 {
+        font: 500 2rem/1.5 var(--ff-base);
+      
+    }
+
+    & .content {
+      display: flex;
+      gap: 1.5rem;
+      flex-direction: column;
+
+      & figure {
+
+        & > img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: scale 500ms;
+        }
+        
+        animation: image-appear ease backwards;
+        animation-timeline: view();
+        animation-range: 20vh 50vh;
+  
+        &[data-delay] {
+          animation-range: 20vh 50vh;
+        }
+      }
+    }
+  }
+}
